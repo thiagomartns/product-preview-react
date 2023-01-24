@@ -1,3 +1,104 @@
 @import './global.scss';
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+.App {
+  background-color: $cream;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .pageContainer {
+    display: grid;
+    grid-template-columns: 9fr 10fr;
+    max-width: 800px;
+
+    .leftColumn {
+
+      img {
+        width: 100%;
+        height: 75vh;
+        object-fit: cover;
+      }
+    }
+
+    .rightColumn {
+      background-color: $white;
+      height: 75vh;
+
+      .content {
+        width: 95%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 2rem;
+
+        h2 {
+          font: $montserrat-m;
+          color: $dark-grayish-blue;
+          letter-spacing: .5rem;
+          text-transform: uppercase;
+        }
+
+        h1 {
+          font: $fraunces-b;
+          font-size: 2.75rem;
+          width: 10ch;
+          color: $very-dark-blue;
+        }
+        
+        p {
+          font: $montserrat-m;
+          color: $dark-grayish-blue;
+          line-height: 1.5;
+        }
+
+        .price {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 90%;
+          padding: .25rem 0;
+
+          h1 {
+            color: $dark-cyan;
+            font-size: 2.5rem;
+          }
+
+          h3 {
+            font: $montserrat-m;
+            text-decoration: line-through;
+            color: $dark-grayish-blue;
+          }
+        }
+
+        .buyBtn {
+          background-color: $dark-cyan;
+          padding: 1rem;
+          border-radius: 8px;
+          border: none;
+          display: flex;
+          color: $white;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          font: $montserrat-b;
+          width: 100%;
+
+          &:hover {
+            background-color: $darker-cyan;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
