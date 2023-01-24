@@ -16,21 +16,25 @@
 
   .pageContainer {
     display: grid;
-    grid-template-columns: 9fr 10fr;
+    grid-template-columns: 1fr 1fr;
     max-width: 800px;
+    // box-shadow: rgba(0, 0, 0, 1);
 
     .leftColumn {
+      // border-radius: 20px 0 0 20px;
 
       img {
         width: 100%;
         height: 75vh;
         object-fit: cover;
+        border-radius: 20px 0 0 20px;
       }
     }
 
     .rightColumn {
       background-color: $white;
       height: 75vh;
+      border-radius: 0 20px 20px 0;
 
       .content {
         width: 95%;
@@ -46,6 +50,7 @@
           color: $dark-grayish-blue;
           letter-spacing: .5rem;
           text-transform: uppercase;
+          margin-bottom: .25rem;
         }
 
         h1 {
@@ -59,12 +64,12 @@
           font: $montserrat-m;
           color: $dark-grayish-blue;
           line-height: 1.5;
+          padding-top: 0.25rem;
         }
 
         .price {
           display: flex;
           align-items: center;
-          justify-content: space-between;
           width: 90%;
           padding: .25rem 0;
 
