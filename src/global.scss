@@ -14,3 +14,12 @@ $white: hsl(0, 0%, 100%);
 $montserrat-m: 500 0.875rem "Montserrat", sans-serif;
 $montserrat-b: 700 0.875rem "Montserrat", sans-serif;
 $fraunces-b: 700 0.875rem "Fraunces", sans-serif;
+
+//responsive
+$width: 480px;
+
+@mixin mobile {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}
